@@ -1,0 +1,70 @@
+ /* Reset básico para evitar estouro de largura */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #FBFDF5;                      
+            line-height: 1.6;
+            padding: 20px 10px;
+        }    
+        h1 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        h2 {
+            color: #333;
+            margin-bottom: 10px;
+        }
+        .container {
+            display: flex; /* Transforma em Flexbox */
+            align-items: center; /* Alinha os itens verticalmente ao centro */
+            justify-content: space-between; /* Distribui o espaço entre os elementos */
+            flex-wrap: wrap; /* Permite quebrar linha em telas pequenas */
+            gap: 15px; /* Espaço seguro entre os elementos */
+            padding: 20px;           
+            background-color: #D8E2DC;
+            border: #333 solid 1px;
+            max-width: 1000px; /* Largura máxima controlada */
+            width: 100%; /* Adapta-se a telas menores que 1000px */
+            margin: 0 auto 20px auto; /* Centraliza o container */
+        }  
+        /* Ajusta para que o texto da citação ocupe o espaço central e ajusta também o alinhamento */
+        .container cite {
+            flex: 1;
+            min-width: 200px;
+            text-align: center;
+            font-style: italic;
+        }
+        .coelho1, .coelho2 {
+            width: 70px;
+            height: 70px; /* Mantém proporção 1:1 para não distorcer */
+            object-fit: cover; /* Evita achatar a imagem */
+            border-radius: 50%; /* Círculo perfeito, igual foto de perfil WhatsApp */
+            flex-shrink: 0; /* Impede a imagem seja prejudicada na visualização em dispositivos móveis */
+        }    
+        .section-central {
+            background-color: #D8E2DC;
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 20px;
+            border: #333 solid 1px;
+        }  
+        .section1, .section2 {
+            margin-bottom: 15px;
+        }
+        /* Regra para telas menores (smartphones) */
+        @media (max-width: 600px) {
+            .container {
+                justify-content: center;
+                text-align: center;
+            }
+        }
+        .rodape{
+            width: 95%;
+            text-align: center;
+        }
